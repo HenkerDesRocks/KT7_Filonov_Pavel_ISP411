@@ -1,0 +1,50 @@
+﻿<Page x:Class="Master_Floor.Pages.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Master_Floor.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="AddPage">
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="0" Margin="20 0 20 0">
+                <TextBlock Text="Тип" HorizontalAlignment="Center" FontSize="15" FontFamily="Segoe UI"></TextBlock>
+                <TextBox x:Name="Type" Width="400" Margin="0 10 0 20" Height="30"></TextBox>
+
+                <TextBlock Text="Название" HorizontalAlignment="Center" FontSize="15" FontFamily="Segoe UI"></TextBlock>
+                <TextBox x:Name="Name" Width="400" Margin="0 10 0 20" Height="30"></TextBox>
+
+                <TextBlock Text="Рейтинг" HorizontalAlignment="Center" FontSize="15" FontFamily="Segoe UI"></TextBlock>
+                <TextBox x:Name="Rate" Width="400" Margin="0 10 0 20" Height="30"></TextBox>    
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="20 0 20 0">
+
+                <TextBlock Text="Директор" HorizontalAlignment="Center" FontSize="15" FontFamily="Segoe UI"></TextBlock>
+                <TextBox x:Name="Director" Width="400"  Margin="0 10 0 20" Height="30"></TextBox>
+
+                <TextBlock Text="Телефон" HorizontalAlignment="Center" FontSize="15" FontFamily="Segoe UI"></TextBlock>
+                <TextBox x:Name="phone" Width="400" Margin="0 10 0 20" Height="30"></TextBox>
+            </StackPanel>
+            
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button x:Name="BackButton" Click="BackButton_Click" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Margin="20 0 0 0" Width="200" Height="70" Background="#67BA80 "
+                     Content="Добавить"></Button>
+        </Grid>
+    </Grid>
+</Page>

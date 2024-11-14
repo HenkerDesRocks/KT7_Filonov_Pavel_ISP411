@@ -1,0 +1,73 @@
+﻿<Page x:Class="Master_Floor.Pages.PartnerView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Master_Floor.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Background="#FFFFFF "
+      Title="PartnerView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="20 0 20 0">
+            <Border BorderThickness="1" BorderBrush="Black">
+            <ListView x:Name="List">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                            <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="560"></ColumnDefinition>
+                                <ColumnDefinition Width="160"></ColumnDefinition>
+                                 <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock></TextBlock>
+                                        <TextBlock Text=" | "></TextBlock>
+                                        <TextBlock></TextBlock>
+                                    </StackPanel>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock></TextBlock>
+                                    <StackPanel>
+                                        <TextBlock Text="Рейтинг: "></TextBlock>
+                                        <TextBlock></TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <TextBlock Text="%"></TextBlock>
+                            </Grid>
+                                <Grid Grid.Column="2">
+                                    <StackPanel>
+                                        
+                                        <Button x:Name="EditButton" Click="EditButton_Click" VerticalAlignment="Center" HorizontalAlignment="Left"
+                    Margin="20 0 0 5" Width="200" Height="70" Background="#67BA80 "
+                     Content="Редактировать"></Button>
+                                        
+                                        <Button x:Name="HistoryBurron" Click="HistoryButton_Click" VerticalAlignment="Center" HorizontalAlignment="Left"
+                    Margin="20 5 0 0" Width="200" Height="70" Background="#67BA80 "
+                     Content="История"></Button>
+                                        
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button x:Name="AddButton" Click="AddButton_Click" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Margin="20 0 0 0" Width="200" Height="70" Background="#67BA80 "
+                     Content="Добавить"></Button>
+  
+        </Grid>
+    </Grid>
+</Page>
